@@ -1,7 +1,9 @@
 import { Tabs } from 'expo-router';
+
 import type React from 'react';
 import { Text, View } from 'react-native';
 import { Routes } from '~/global';
+import { Feather } from '@expo/vector-icons';
 
 const TabLayout: React.FC = () => {
   return (
@@ -16,8 +18,8 @@ const TabLayout: React.FC = () => {
           name={route.name}
           options={{
             tabBarIcon: ({ focused }) => (
-              <View className="min-w-fit whitespace-nowrap">
-                <Text>{route.label}</Text>
+              <View className=" p-0 m-0 whitespace-nowrap min-w-[112px] min-h-14 mt-3 h-full flex flex-col items-center justify-center  w-full">
+                <Feather name={route.icon} size={20} color="black" />
               </View>
             ),
             tabBarShowLabel: false,
