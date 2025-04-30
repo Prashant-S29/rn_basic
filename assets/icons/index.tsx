@@ -1,7 +1,5 @@
-import { Feather } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
-// const home = <Feather name="home" size={20} />;
-// const profile = <Feather name="user" size={24} color="black" />
+const search = <FontAwesome name="search" size={12} color="#6b7280" />;
 
-
-// export { home };
+export { search };

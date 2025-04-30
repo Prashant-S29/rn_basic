@@ -19,7 +19,11 @@ const TabLayout: React.FC = () => {
           options={{
             tabBarIcon: ({ focused }) => (
               <View className=" p-0 m-0 whitespace-nowrap min-w-[112px] min-h-14 mt-3 h-full flex flex-col items-center justify-center  w-full">
-                <Feather name={route.icon} size={20} color="black" />
+                <Feather
+                  name={route.icon}
+                  size={20}
+                  color={focused ? '#000000' : '#00000050'}
+                />
               </View>
             ),
             tabBarShowLabel: false,

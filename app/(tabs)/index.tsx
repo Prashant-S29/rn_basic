@@ -1,11 +1,28 @@
 import type React from 'react';
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+// components
+import { Searchbar } from '~/compponents/feature';
 
 const Home: React.FC = () => {
   return (
-    <View className="flex flex-col w-full h-full gap-2 justify-center items-center">
-      <Text>Home Screen</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingBottom: 10,
+          minHeight: '100%',
+        }}
+      >
+        <View className="p-5 flex flex-col gap-2">
+          <Text className="text-xl">Canvas</Text>
+          <View className="flex-1 ">
+            <Searchbar />
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
